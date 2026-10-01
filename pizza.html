@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza rendelés</title>
+</head>
+
+<body>
+    <form action="https://httpbin.org/post" method="post">
+
+        <fieldset>
+            <legend>Pizza</legend>
+            <p>
+                <label for="fajta">Fajta *</label>
+                <select name="fajta" id="fajta" required>
+                    <option value="">Válassz</option>
+                    <option value="margherita">Margherita</option>
+                    <option value="szalamis">Szalámis</option>
+                    <option value="sonkas">Sonkás</option>
+                    <option value="negysajtos">Négysajtos</option>
+                    <option value="hawaii">Hawaii</option>
+                </select>
+            </p>
+
+            <p><strong>Méret *</strong></p>
+            <p>
+                <input type="radio" name="meret" id="m1" value="26">
+                <label for="m1">26 cm</label>
+                <input type="radio" name="meret" id="m2" value="32" checked>
+                <label for="m1">32 cm</label>
+            </p>
+
+            <p><strong>Extra feltét</strong></p>
+
+            <p>
+                <label for="fajta">Sajt</label>
+                <select name="sajtfajta" id="sajtfajta" required>
+                    <option value="">Válassz</option>
+                    <option value="trapista">Trapista</option>
+                    <option value="mozzarella">Mozzarella</option>
+                    <option value="cheddar">Cheddar</option>
+                    <option value="sajtmix">Sajtmix</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="fajta">Hús</label>
+                <select name="húsfajta" id="húsfajta" required>
+                    <option value="">Válassz</option>
+                    <option value="szalami">Szalámi</option>
+                    <option value="sonka">Sonka</option>
+                    <option value="bacon">Bacon</option>
+                    <option value="kolbasz">Kolbász</option>
+                    <option value="tarja">Tarja</option>
+                    <option value="csirkemell">Csirkemell csíkok</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="fajta">Zöldség</label>
+                <select name="zoldfajta" id="zoldfajta" required>
+                    <option value="">Válassz</option>
+                    <option value="kukorica">Kukorica</option>
+                    <option value="gomba">Gomba</option>
+                    <option value="ananasz">Ananász</option>
+                    <option value="uborka">Uborka</option>
+                    <option value="hagyma">Hagyma</option>
+                </select>
+            </p>
+
+
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Kapcsolat</legend>
+            <p>
+                <label for="name">Név *</label>
+                <input type="text" name="name" id="name" required placeholder="Minta András">
+            </p>
+
+            <p>
+                <label for="tel">Telefon *</label>
+                <input type="tel" name="telefon" id="tel" placeholder="+36 30 123 4567" required>
+            </p>
+
+            <p>
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" placeholder="minta@example.com" required>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Szállítás</legend>
+            <p>
+                <label for="str">Utca, házszám *</label>
+                <input type="str" name="str" id="str" required placeholder="Fő utca 1">
+            </p>
+
+            <p>
+                <label for="door">Egyéb információ: emelet, ajtó</label>
+                <input type="text" name="door" id="door" placeholder="5. emelet 1. ajtó">
+            </p>
+
+            <p>
+                <label for="bell">Csengő</label>
+                <input type="text" name="bell" id="bell" placeholder="10-es csengő">
+            </p>
+
+            <p>
+                <label for="futar">Kérem, hogy a futár hívjon fel</label>
+                <input type="checkbox" name="futar" id="futar">
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Fizetés</legend>
+            <p>
+                <label for="cash">Kártya online</label>
+                <input type="radio" name="payment" id="keszpenz">
+            </p>
+
+            <p>
+                <label for="cash">Kártyával a futárnál (szép kártyát elfogdunk)</label>
+                <input type="radio" name="payment" id="kartyafutar">
+            </p>
+
+            <p>
+                <label for="cash">Készpénz</label>
+                <input type="radio" name="payment" id="kartyaonline">
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <button type="submit">Rendelés elküldése</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>
